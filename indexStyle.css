@@ -1,0 +1,143 @@
+        body {
+            font-family: 'Comic Sans MS', sans-serif;
+            background-color: #2c1443; /* Dark purple background color */
+            color: #fff; /* White text color */
+            margin: 0;
+            padding: 20px;
+            background-image: url('sprinkle.png'); /* Path to sprinkle image */
+            background-size: 80px; /* Adjust size of sprinkle pattern */
+        }
+
+        header h1 {
+            font-family: 'Pacifico', cursive;
+            margin-top: 20px;
+            font-size: 2.5em;
+            color: #BD72BD; /* Dark magenta */
+        }
+
+        header h1:hover {
+            color: #8B008B
+        }
+
+        .container {
+            max-width: 1150px;
+            margin: 0 auto;
+            padding: 0 10px;
+        }
+
+        header {
+            background-image: url('cuteBg3.png'); /* Path to frame image */
+            background-size: 90%; /* Cover the whole header */
+            background-position: 50% 50%; /* Background image position */
+            background-repeat: no-repeat; /* Do not repeat background image */
+            background-color: #4a236a; /* Darker purple header background color */
+            color: #fff;
+            padding: 100px;
+            text-align: center;
+            position: relative;
+            max-width: 1100px; /* Set maximum width for header */
+            margin: 0 auto; /* Center header */
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            background-color: transparent; /* Transparent background color for buttons */
+            cursor: pointer;
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.5); /* Slightly opaque white on hover */
+        }
+
+        .content, .calculator, .timetable, .middle-box, .bottom-box {
+            background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+            padding: 30px; /* Unified padding for all elements */
+            border-radius: 1px; /* Rounded corners */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+            margin-bottom: 0px; /* Space below each element */
+            max-width: 4000px; /* Maximum width to match header */
+            margin: 0 auto; /* Center elements horizontally */
+        }
+
+        .calculator, .timetable {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 110px;
+            text-align: center;
+        }
+
+        .bottom-boxes {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0px;
+            max-width: 1150px; /* Set maximum width to match header */
+            margin: 0 auto; /* Center bottom boxes container */
+        }
+
+        .bottom-boxes > .calculator,
+        .bottom-boxes > .timetable {
+            flex: 1; /* Ensures both take up equal space */
+            box-sizing: border-box; /* Include padding and border in the element's total width and height */
+        }
+
+        .calculator input[type="number"],
+        .calculator select,
+        .calculator button {
+            margin-bottom: 1px;
+            padding: 10px;
+            border: 2px solid #7d5b8c; /* Dark purple border color */
+            border-radius: 5px;
+            font-size: 20px;
+            width: 100%; /* Full width for better layout */
+            max-width: 300px; /* Limit width */
+        }
+
+        .calculator button {
+            background-color: #7d5b8c; /* Dark purple button background color */
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .calculator button:hover {
+            background-color: #C881FF; /* Darker purple on hover */
+        }
+
+        .calculator p {
+            font-size: 20px;
+        }
+
+        footer {
+            text-align: center;
+            color: #777;
+            margin-top: 20px;
+        }
+
+        footer p {
+            margin: 0;
+            color: #fff;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 0px;
+        }

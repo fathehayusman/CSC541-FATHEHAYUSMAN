@@ -1,0 +1,179 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #ffeefc;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+	background-image: url('sprinkle.png');
+    background-size: 180px;
+}
+
+.comment-section, .contactMe-section {
+    width: 60%;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #fff0f6;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	border: 2px solid #ff87ab;
+}
+
+#contactMe-container {
+    border: 1px solid #ffd1dc;
+    width: 100%;
+    height: auto; /* Adjust height if necessary */
+}
+
+h2 {
+    text-align: center;
+    color: #ff69b4;
+    font-size: 24px;
+}
+
+#comments-container {
+    margin-bottom: 20px;
+    max-height: 300px;
+    overflow-y: auto;
+    padding: 10px;
+    border: 1px solid #ffd1dc;
+    border-radius: 10px;
+    background-color: #ffeefc;
+}
+
+.comment {
+    background-color: #ffe0f0;
+    border: 1px solid #ffb3c6;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#comment-input {
+    width: 98%;
+    height: 100px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ffd1dc;
+    border-radius: 10px;
+    background-color: #fff0f6;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+button:hover {
+    background-color: #F8A4CD;
+}
+
+.contactMe-section  p {
+    text-align: center;
+}
+
+.contactMe-section  img {
+    margin: 5px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contactMe-section  img:hover {
+    transform: scale(1.1); /* Scale up the icon */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add a shadow */
+}
+nav ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+nav ul li a {
+            text-decoration: none;
+            color: #333;
+            display: inline-block;
+            padding: 10px 15px;
+            border-radius: 50%;
+            background-color: #FFC0CB; /* Pastel pink circle background */
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #F68FA1; /* Darker pink on hover */
+        }
+		
+		header h3:hover {
+			color: #FA647E;
+		}		
+
+        .header-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .container {
+            width: 60%;
+            margin: auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .section-box {
+            box-sizing: border-box;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+        .comment-section h2, .contactMe-section h2 {
+            margin-top: 0;
+        }
+        .comments-output {
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        .comment {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        .reply-container {
+            margin-left: 20px;
+        }
+        .comment-input, .reply-input {
+            display: block;
+            margin: 10px 0;
+            width: 100%;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            font-size: 14px;
+        }
+        .comment-input {
+            background-color: #f9f9f9;
+        }
+        .reply-input {
+            background-color: #ffe4e1;
+            border: 1px solid #ff69b4;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 14px;
+        }
+        .post-button, .reply-button {
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .post-button:hover, .reply-button:hover {
+            background-color: #AB3D78;
+        }

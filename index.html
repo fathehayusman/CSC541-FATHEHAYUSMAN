@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="indexStyle.css">
+	<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Raleway:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="myPhoto3.jpg" alt="My Photo" style="width: 300px; border-radius: 20%;">
+            <h1>Welcome To My Portfolio</h1>
+            <nav>
+                <ul>
+                    <li><a href="AboutMe.html">About</a></li>
+                    <li><a href="Education.html">Education</a></li>
+                    <li><a href="Passion.html">Passion</a></li>
+                    <li><a href="photoGallery.html">Photos</a></li>
+					<li><a href="comment.html">Comment</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <div class="bottom-boxes">
+        <div class="bottom-box">
+            <h2>CDCS253 4A</h2>
+            <div class="content">
+                <h2>Time Table</h2>
+                <table border="2">
+                    <tr>
+                        <th>Time/Day</th>
+                        <th>Monday</th>
+                        <th>Tuesday</th>
+                        <th>Wednesday</th>
+                        <th>Thursday</th>
+                        <th>Friday</th>
+                    </tr>
+                    <tr>
+                        <td>08:00 - 10:00</td>
+                        <td>CSC541</td>
+                        <td>CSC541</td>
+                        <td>ELC651</td>
+                        <td></td>
+                        <td>CSC584</td>
+                    </tr>
+                    <tr>
+                        <td>10:00 - 12:00</td>
+                        <td>CSC566</td>
+                        <td></td>
+                        <td></td>
+                        <td>CSC508</td>
+                        <td>CSC577</td>
+                    </tr>
+                    <tr>
+                        <td>12:00 - 02:00</td>
+                        <td></td>
+                        <td>CSC566</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>02:00 - 04:00</td>
+                        <td>CSC584</td>
+                        <td>TAC415</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>04:00 - 06:00</td>
+                        <td></td>
+                        <td>CSC577</td>
+                        <td>CSC508</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="calculator">
+            <h1>Let's calculate numbers together</h1>
+            <input type="number" id="num1" placeholder="Enter first number">
+            <input type="number" id="num2" placeholder="Enter second number">
+
+            <div class="button-container">
+                <button onclick="add()">Add</button>
+                <button onclick="subtract()">Subtract</button>
+                <button onclick="multiply()">Multiply</button>
+                <button onclick="divide()">Divide</button>
+            </div>
+            <p id="result">Result: </p>
+        </div>
+    </div>
+
+    <script>
+        function add() {
+            var num1 = parseFloat(document.getElementById('num1').value);
+            var num2 = parseFloat(document.getElementById('num2').value);
+            document.getElementById('result').innerText = 'Result: ' + (num1 + num2);
+        }
+
+        function subtract() {
+            var num1 = parseFloat(document.getElementById('num1').value);
+            var num2 = parseFloat(document.getElementById('num2').value);
+            document.getElementById('result').innerText = 'Result: ' + (num1 - num2);
+        }
+
+        function multiply() {
+            var num1 = parseFloat(document.getElementById('num1').value);
+            var num2 = parseFloat(document.getElementById('num2').value);
+            document.getElementById('result').innerText = 'Result: ' + (num1 * num2);
+        }
+
+        function divide() {
+            var num1 = parseFloat(document.getElementById('num1').value);
+            var num2 = parseFloat(document.getElementById('num2').value);
+            if (num2 !== 0) {
+                document.getElementById('result').innerText = 'Result: ' + (num1 / num2);
+            } else {
+                document.getElementById('result').innerText = 'Result: Cannot divide by zero';
+            }
+        }
+    </script>
+    <footer>
+        <p>&copy; My Portfolio 2024</p>
+    </footer>
+</body>
+</html>
+

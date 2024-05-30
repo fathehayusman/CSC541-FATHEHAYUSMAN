@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment Section</title>
+    <link rel="stylesheet" href="CommentStyle.css">
+</head>
+<body>
+    <div class="header-container">
+        <center>
+            <h3>✨ Hi there! Welcome to the comment section. Feel free to ask me any questions you have ✨</h3>
+        </center>
+    </div>
+    <div class="container">
+        <div class="section-box comment-section">
+            <h2>Comments</h2>
+            <textarea id="comment-input" class="comment-input" placeholder="Write a comment..."></textarea>
+            <button class="post-button" onclick="addComment()">Post Comment</button>
+        </div>
+        <div class="section-box contactMe-section">
+            <h2>Contact Me</h2>
+            <div id="contactMe-container">
+                <center><h3>Alternatively, you can reach out to me on my personal social media accounts. 💌</h3></center>
+            </div>
+            <p><a href="mailto:fathehayusman@gmail.com"><img src="email-icon.png" alt="fathehayusman@gmail.com" width="50" height="40"></a></p>
+            <p><a href="https://www.instagram.com/fathehay"><img src="instagram-icon.png" alt="fathehay" width="50" height="50"></a></p>
+            <p><a href="https://twitter.com/fifiearies"><img src="twitter-icon.png" alt="fifiearies" width="60" height="60"></a></p>
+            <p><a href="https://www.facebook.com/fatheha.yusman"><img src="facebook-icon.png" alt="Fatheha Yusman" width="50" height="50"></a></p>
+        </div>
+        <div id="comments-container" class="section-box comments-output"></div>
+    </div>
+    <script>
+        function addComment() {
+            const commentInput = document.getElementById('comment-input');
+            const commentText = commentInput.value.trim();
+
+            if (commentText !== '') {
+                const commentsContainer = document.getElementById('comments-container');
+
+                const newComment = document.createElement('div');
+                newComment.className = 'comment';
+
+                const commentContent = document.createElement('p');
+                commentContent.textContent = commentText;
+
+                const replyButton = document.createElement('button');
+                replyButton.textContent = 'Reply';
+                replyButton.className = 'reply-button';
+                replyButton.onclick = function() {
+                    addReply(this);
+                };
+
+                const replyContainer = document.createElement('div');
+                replyContainer.className = 'reply-container';
+
+                newComment.appendChild(commentContent);
+                newComment.appendChild(replyButton);
+                newComment.appendChild(replyContainer);
+                commentsContainer.appendChild(newComment);
+                commentInput.value = '';
+            }
+        }
+
+        function addReply(replyButton) {
+            const replyContainer = replyButton.nextElementSibling;
+
+            const replyInput = document.createElement('textarea');
+            replyInput.className = 'reply-input';
+            replyInput.placeholder = 'Write a reply...';
+
+            const postReplyButton = document.createElement('button');
+            postReplyButton.textContent = 'Post Reply';
+            postReplyButton.className = 'reply-button';
+            postReplyButton.onclick = function() {
+                postReply(replyInput, replyContainer);
+            };
+
+            replyContainer.appendChild(replyInput);
+            replyContainer.appendChild(postReplyButton);
+            replyButton.disabled = true;
+        }
+
+        function postReply(replyInput, replyContainer) {
+            const replyText = replyInput.value.trim();
+
+            if (replyText !== '') {
+                const newReply = document.createElement('div');
+                newReply.className = 'reply';
+                newReply.textContent = replyText;
+
+                replyContainer.appendChild(newReply);
+                replyInput.remove();
+                replyContainer.querySelector('button').remove();
+                replyContainer.previousElementSibling.disabled = false;
+            }
+        }
+    </script>
+    <section id="comment">
+        <center><h3>QUICK LINKS</h3></center>
+        <nav>
+            <ul>
+                <li class="box"><a href="AboutMe.html">About</a></li>
+                <li class="box"><a href="Education.html">Education</a></li>
+                <li class="box"><a href="Passion.html">Passion</a></li>
+                <li class="box"><a href="photoGallery.html">Photo</a></li>
+            </ul>
+        </nav>
+        <footer>
+            <center><h3> Want to go Home? Click <a href="index.html">here</a></h3></center>
+        </footer>
+        <center>
+            <footer>
+                <p>&copy; My Portfolio 2024</p>
+            </footer>
+        </center>
+    </section>
+</body>
+</html>
